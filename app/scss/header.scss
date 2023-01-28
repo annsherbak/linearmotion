@@ -1,0 +1,824 @@
+.header {
+  position: relative;
+
+  &__top {
+    background: #F4F6F9;
+  }
+
+  &__top-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__top-inner {
+    display: flex;
+    align-items: center;
+    padding: 16px 12px;
+
+  }
+
+  &__top-logo {
+    margin-right: 88px;
+  }
+
+  &__top-nav {
+    margin-right: 66px;
+  }
+
+  &__top-list {
+    display: flex;
+  }
+
+  &__top-list--item {
+    margin-right: 52px;
+  }
+
+  &__top-list--item:last-child {
+    margin-right: 0;
+  }
+
+
+  &__top-form {
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+    background: #d5d5d5;
+    background: $main-blue;
+    position: absolute;
+    top: 103px;
+    left: 0;
+    right: 0;
+
+  }
+
+  &__top-form--decoration {
+    width: 47px;
+    height: 47px;
+  }
+
+  &__top-form--decoration svg {
+    width: 47px;
+    height: 47px;
+    fill: $white;
+  }
+
+  &__top-form.open {
+    max-height: 70px;
+    transition: max-height 0.5s ease;
+    padding: 10px;
+  }
+
+  &__top-form--blackout {
+    display: none;
+    z-index: 4;
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    background: black;
+    opacity: 0.6;
+    height: 100%;
+  }
+
+
+  &__top-form--container {
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto !important;
+  }
+
+  &__top-form #ya-site-form0 .ya-site-form__input-text {
+    background: inherit;
+    height: 43px;
+    border: none !important;
+  }
+
+  &__top-form #ya-site-form0 .ya-site-form__submit {
+    padding: 8px 24px;
+    background: inherit;
+    border: 1px solid #F4F6F9;
+    color: #F4F6F9 !important;
+    border-radius: 5px;
+  }
+
+  &__top-form #ya-site-form0 .ya-site-form__submit:hover,
+  &__top-form #ya-site-form0 .ya-site-form__submit:focus {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+
+  &__top-form #ya-site-form0 .ya-site-form__submit:active {
+    color: $main-orange !important;
+    border: 1px solid $main-orange;
+  }
+
+  &__top-list--item a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: $grey;
+  }
+
+
+  &__top-list--item a:hover,
+  &__top-list--item a:focus {
+    color: $main-orange;
+  }
+
+  &__top-list--item a:active {
+    transform: scale(1.05);
+  }
+
+
+  &__top-search--trigger {
+    padding: 0;
+    border: 0;
+    background: inherit;
+    cursor: pointer;
+    width: 43px;
+    height: 43px;
+    fill: $grey;
+
+  }
+
+  &__top-search--trigger svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__top-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__top-feedback {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: $main-orange;
+    text-decoration: underline;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: inherit;
+    cursor: pointer;
+
+  }
+
+  &__top-feedback:hover,
+  &__top-feedback:focus {
+    font-weight: 600;
+  }
+
+  &__top-contact {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: $main;
+    padding: 0;
+    border: none;
+  }
+
+  &__top-burger {
+    display: none;
+  }
+
+  &__bottom {
+    height: 70px;
+    background: $main-blue;
+  }
+
+
+  &__top-nav--decor {
+    display: none;
+
+
+  }
+
+  &__bottom-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom-item a {
+    display: block;
+    padding: 24px 48px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__bottom-item:hover a,
+  &__bottom-item:focus a {
+    color: $main-orange;
+    transition: all 0.3s ease;
+  }
+
+  &__bottom-item:active {
+    opacity: 0.7;
+  }
+
+  &__bottom-item.current-menu-item a {
+    background: #F4F6F9;
+    color: $main-orange;
+
+  }
+}
+
+.feedback-popUp {
+  display: none;
+  position: fixed;
+  padding: 64px;
+  padding-top: 28px;
+  background: #F4F6F9;
+  border-radius: 10px;
+  width: 480px;
+  height: fit-content;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+
+  &.open {
+    display: block;
+  }
+
+  &__blackout {
+    display: none;
+    z-index: 4;
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    background: black;
+    opacity: 0.6;
+    height: 100%;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 120%;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  &__close {
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+    margin-right: -32px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 130%;
+    color: $grey;
+  }
+
+  &__comment {
+    font-size: 13px;
+    line-height: 130%;
+    color: $grey;
+    margin-bottom: 32px;
+  }
+
+  &__form-input {
+    max-width: 270px;
+    margin-top: 6px;
+    padding: 12px 8px;
+    font-size: 15px;
+    line-height: 130%;
+    color: $grey;
+  }
+
+  &__form-input:focus-visible {
+    outline: 2px solid $main-orange;
+    color: $main-orange;
+    border: 1px solid $main-orange;
+  }
+
+  &__form-container {
+    padding: 0 32px;
+  }
+
+  &__form-label {
+    font-size: 15px;
+    line-height: 130%;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  &__form-acceptance {
+    font-size: 13px;
+    line-height: 130%;
+    color: $grey;
+    margin-top: 10px;
+  }
+
+  & .wpcf7-list-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__form-acceptance~.wpcf7-list-item-label {
+    color: $grey;
+  }
+
+  &__form-acceptance~.wpcf7-list-item-label a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  &__form--submit {
+    background: #5FABC4;
+    border-radius: 5px;
+    padding: 16px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    color: $white;
+    border: none;
+    margin-top: 32px;
+    height: 55px;
+
+  }
+
+
+}
+
+.feedback-popUp__answer {
+  display: none;
+  position: fixed;
+  padding: 64px;
+  padding-top: 28px;
+  background: #F4F6F9;
+  border-radius: 10px;
+  width: 480px;
+  height: fit-content;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+
+  &-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 120%;
+    margin-bottom: 16px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    &__bottom-item.current-menu-item a {
+      background: transparent;
+      color: $main-orange;
+
+    }
+
+    &__bottom {
+      display: none;
+    }
+
+    &__top-form {
+      max-height: 0;
+      top: 102px;
+      display: none;
+
+    }
+
+    &__top-form.open {
+      max-height: none;
+      display: block;
+
+    }
+
+    &__top {
+      background: $main-blue;
+    }
+
+    &__top-inner {
+      padding: 16px 0;
+      justify-content: space-between;
+    }
+
+    &__top-feedback {
+      color: $light-orange;
+    }
+
+
+    &__top-nav--decor {
+      position: absolute;
+      left: 10%;
+
+    }
+
+    &__top-nav {
+      display: none;
+      top: 100px;
+      left: 0;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      background: $dark-blue;
+      height: fit-content;
+      border-radius: 0 0 15px 15px;
+      background: #112b34;
+      box-shadow: inset -20px -20px 58px #0c1f25, inset 20px 20px 58px #163743;
+
+
+
+    }
+
+    &__top-list {
+      padding: 65px 0 !important;
+      max-width: 200px;
+      margin: auto;
+      flex-direction: column;
+      position: relative;
+
+    }
+
+    &__top-list::before {
+      content: url(../images/decore_product.svg);
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      left: -150px;
+      top: -5px;
+    }
+
+    &__top-list--item {
+      display: none;
+      margin: 0;
+      margin-bottom: 16px;
+
+    }
+
+    &__top-list--item a {
+      margin: 0;
+      color: $white !important;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%;
+      text-transform: uppercase;
+    }
+
+    &__bottom-list {
+      display: none;
+      flex-direction: column;
+      padding: 16px 0 !important;
+    }
+
+    &__bottom-item {
+      margin-bottom: 12px;
+    }
+
+    &__bottom-item:last-child {
+      margin: 0;
+    }
+
+    &__bottom-item a {
+      padding: 0;
+      margin: 0;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 130%;
+      text-transform: none;
+
+    }
+
+
+
+    &__bottom-item.active &__bottom-item a {
+      background: none;
+      color: $white;
+    }
+
+
+
+    &__top-burger {
+      order: 4;
+      display: block;
+      width: 30px;
+      height: 24px;
+      position: relative;
+      transition-duration: 1s;
+      margin: auto 0;
+      cursor: pointer;
+    }
+
+    &__top-burger--line {
+      top: 0;
+      height: 4px;
+      width: 30px;
+      background-color: $white;
+      border-radius: 20px;
+      position: absolute;
+      transition-duration: .25s;
+      transition-delay: .25s;
+    }
+
+    &__top-burger--line:before {
+      left: 0;
+      position: absolute;
+      top: 9px;
+      height: 4px;
+      width: 30px;
+      background-color: $white;
+      content: "";
+      border-radius: 20px;
+      transition-duration: .25s;
+      transition: transform .25s, top .25s .25s;
+    }
+
+    &__top-burger--line:after {
+      left: 0;
+      position: absolute;
+      top: 18px;
+      height: 4px;
+      width: 30px;
+      background-color: $white;
+      content: "";
+      border-radius: 20px;
+      transition-duration: .25s;
+      transition: transform .25s, top .25s .25s;
+    }
+
+    &__top-burger.open &__top-burger--line {
+      transition-duration: 0.1s;
+      transition-delay: .25s;
+      background: transparent;
+    }
+
+    &__top-burger.open &__top-burger--line:before {
+      transition: top .25s, transform .25s .25s;
+      top: 9px;
+      transform: rotateZ(-45deg);
+    }
+
+    &__top-burger.open &__top-burger--line:after {
+      transition: top 0.4s, transform .25s .25s;
+      top: 9px;
+      transform: rotateZ(45deg);
+    }
+
+    &__top-logo {
+      order: -1;
+    }
+
+    &__top-search {
+      order: 3;
+      margin: 0;
+    }
+
+    &__top-search--trigger {
+      fill: $white;
+    }
+
+
+
+    &__top-contacts {
+      order: 2;
+      margin-right: 0;
+    }
+
+    &__top-contact {
+      color: $white;
+    }
+
+    &__top-form--decoration svg {
+      fill: $main-orange;
+    }
+
+    &__top-form--container {
+      padding-left: 10px;
+      padding-right: 45px;
+      background: #FFFFFF;
+      border-radius: 35px;
+    }
+
+    &__top-form--container #ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
+      color: $grey !important;
+
+    }
+
+    &__top-form--container #ya-site-form0 .ya-site-form__form .ya-site-form__input-text::placeholder {
+      color: $grey !important;
+    }
+
+    &__top-form--container #ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
+      font-size: 15px !important;
+    }
+
+    &__top-form #ya-site-form0 .ya-site-form__submit {
+      border: none;
+      font-size: 15px !important;
+      line-height: 130%;
+      color: $grey !important;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+@media screen and (max-width: $mobile-width) {
+  .header {
+    position: fixed;
+    width: 100%;
+
+    &__top-nav {
+
+      position: fixed;
+      min-height: 100%;
+      bottom: 0;
+      top: 0;
+      display: none
+    }
+
+    &__top-form {
+      top: 70px;
+
+    }
+
+    &__top-nav .menu {
+
+      padding: 0 !important;
+      padding-top: 80px !important;
+      margin: auto;
+      height: fit-content;
+      min-height: 100%;
+      height: 300px;
+    }
+
+    &__bottom-list {
+      display: none;
+    }
+
+    &__top-list {
+      padding-top: 60px !important;
+      padding-bottom: 0 !important;
+    }
+
+    &__top-list::before {
+      content: url(../images/decore_product.svg);
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      left: -100px;
+      top: -5px;
+    }
+
+
+    &__top-list--item {
+      display: none
+    }
+
+    &__top-feedback {
+      font-size: 18px;
+      line-height: 130%;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+
+    &__top-wrapper {
+      gap: 21px;
+    }
+
+    &__top-inner {
+      padding: 12px 0px;
+    }
+
+    &__top-contacts {
+      display: none;
+    }
+
+
+    &__top-logo {
+      margin: 0;
+      margin-right: auto;
+    }
+
+    &__top-search {
+      margin-left: auto;
+    }
+
+    &__top-form--container {
+      padding-right: 10px;
+    }
+  }
+
+  .feedback-popUp {
+    margin: 20px;
+    margin-top: 100px;
+    position: fixed;
+    padding: 32px;
+    padding-top: 28px;
+    background: #F4F6F9;
+    border-radius: 10px;
+    width: auto;
+    height: fit-content;
+    height: 550px;
+    overflow: scroll;
+    &__container {
+      height: 630px;
+    }
+
+    &__answer {
+      width: auto;
+      margin: 15px;
+      margin-top: 100px;
+      padding: 40px;
+    }
+
+    &__blackout {
+      display: none;
+      z-index: 4;
+      position: fixed;
+      width: 100%;
+      min-height: 100%;
+      background: black;
+      opacity: 0.6;
+      height: 100%;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__close {
+      margin-right: -16px;
+    }
+
+    &__text {
+      font-size: 13px;
+      text-align: center;
+    }
+
+    &__comment {
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    &__form-input {
+      max-width: 100%;
+      margin-top: 6px;
+      padding: 12px 8px;
+      font-size: 15px;
+      line-height: 130%;
+      color: $grey;
+    }
+
+    &__form-container {
+      padding: 0;
+    }
+
+
+
+    & .wpcf7-list-item {
+      margin: 0;
+      padding: 0;
+      font-size: 11px;
+    }
+
+
+    &__form--submit {
+      background: #5FABC4;
+      border-radius: 5px;
+      padding: 16px;
+      width: 100%;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 130%;
+      color: $white;
+      border: none;
+      margin-top: 32px;
+
+    }
+
+
+  }
+}

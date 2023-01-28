@@ -1,0 +1,419 @@
+.template {
+  &__item {
+    margin-bottom: 32px;
+  }
+  &__list {
+    margin: 20px 0;
+    list-style-position: inside;
+  }
+  &__list li {
+    margin-bottom: 8px;
+  }
+  &__list a {
+    color: $main-orange;
+  }
+  &__list li:last-child {
+    margin-bottom: 0;
+  }
+  &__sublist {
+    margin: 10px 0;
+    list-style:circle !important;
+    padding-left: 30px !important;
+  }
+}
+.main-product {
+  margin-bottom: 80px;
+  margin-top: 56px;
+
+
+  .products {
+    display: flex;
+    gap: 30px;
+  }
+
+  .product-category {
+    // border: 1px solid $grey;
+    width: 23%;
+    padding: 8px;
+    
+  }
+  .product__card-features {
+    display: none;
+  }
+  .product-category a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .woocommerce-loop-category__title .count {
+    display: none;
+  }
+
+  .woocommerce-loop-category__title {
+    font-size: 22px;
+    line-height: 125.5%;
+    color: $main;
+    text-align: center;
+    margin-top: 18px;
+  }
+
+
+  .product-category:hover img,
+  .product-category:hover :focus {
+    transform: scale(1.03);
+  }
+
+  .product-category:active {
+    opacity: 0.6;
+  }
+}
+
+.questions {
+  margin-bottom: 48px;
+
+  &__content {
+    background: #F5F5F5;
+    padding: 72px 144px;
+  }
+
+  &__content-accordion {
+    border-bottom: 1px solid #94B3D0;
+  }
+
+  &__content-accordion--title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    padding: 24px 8px;
+    padding-right: 35px;
+    position: relative;
+  }
+
+  &__content-accordion--title::after {
+    position: absolute;
+    content: '';
+    width: 23px;
+    height: 3px;
+    background: #94B3D0;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &__content-accordion--title::before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 23px;
+    background: #94B3D0;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &__content-accordion--text {
+    display: none;
+    padding: 20px;
+  }
+  &__content-accordion--text a {
+    color: $main-orange;
+    font-weight: 600;
+  }
+
+  &__content-accordion--title.active::before {
+    display: none;
+    transition: all 0.5s ease;
+  }
+
+  &__content-accordion--text.active {
+    display: block;
+  }
+}
+
+.contact {
+  margin-bottom: 74px;
+
+  &__cards {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__card {
+    padding: 77px 84px;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    width: 48%;
+  }
+
+  &__card-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 116%;
+    margin-bottom: 16px;
+  }
+
+  &__card-comment {
+    font-size: 16px;
+    line-height: 130%;
+    color: $grey;
+    margin-bottom: 32px;
+  }
+
+  &__card-adress {
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 32px;
+  }
+
+  &__card-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__card-info--item {
+    display: block;
+    color: $main;
+    margin-bottom: 8px;
+  }
+}
+
+.error {
+  max-width: 440px;
+  max-height: 100%;
+  margin: 130px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__warning {
+    font-weight: 600;
+    font-size: 128px;
+    line-height: 100%;
+    color: #E4E4E4;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 100%;
+    margin-bottom: 32px;
+
+  }
+
+  &__comment {
+    font-size: 15px;
+    line-height: 130%;
+    color: $grey;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+
+  &__link {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    color: $main-blue;
+    text-align: center;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+  }
+
+  &__link:last-child {
+    margin: 0;
+  }
+
+  &__link a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  &__link:hover {
+    transform: scale(1.05);
+  }
+}
+
+
+
+@media screen and (max-width: $tablet-width) {
+  .template {
+    &__item {
+      margin-bottom: 24px;
+    }
+  }
+  .main-product {
+    margin-bottom: 60px;
+
+    .products {
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .product-category {
+      // border: 1px solid $grey;
+      width: 47%;
+      padding: 8px;
+      border: 2px solid #E4E4E4;
+    }
+  }
+
+  .questions {
+    margin-bottom: 48px;
+
+    &__content {
+      background: $white;
+      padding: 40px 60px;
+    }
+  }
+
+  .contact {
+    max-width: 590px;
+    margin: auto;
+    margin-bottom: 62px;
+
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+    }
+
+    &__card {
+      padding: 40px;
+      border: 1px solid #E4E4E4;
+      border-radius: 5px;
+      width: inherit;
+    }
+
+    &__card-comment {
+      font-size: 14px;
+      line-height: 130%;
+      color: $grey;
+      margin-bottom: 32px;
+    }
+
+    &__card-adress {
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+
+  .error {
+    margin: 180px auto;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .main-product {
+    margin-bottom: 50px;
+
+
+    .products {
+      display: flex;
+      gap: 20px;
+    }
+
+    .product-category {
+      // border: 1px solid $grey;
+      width: 100%;
+      padding: 8px;
+    }
+
+    .product-category a {
+      display: flex;
+      gap: 16px;
+      flex-direction: row;
+      align-items:center;
+      
+    }
+    .product-category img {
+      width: auto;
+      height: auto;
+      max-width: 92px;
+    }
+
+    .woocommerce-loop-category__title {
+      font-size: 18px;
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+
+  .questions {
+    &__content {
+      padding: 0;
+    }
+
+    &__content-accordion--title {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &__content-accordion {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  .contact {
+    &__card {
+      padding: 20px;
+    }
+
+    &__card-title {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    &__card-comment {
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    &__card-adress {
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    &__card-info {
+      font-size: 13px;
+      gap: 10px;
+    }
+
+    &__card-info--item {
+      margin-bottom: 2px;
+    }
+  }
+
+  .error {
+
+    &__warning {
+      font-size: 96px;
+    }
+
+    &__title {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+
+    &__comment {
+      font-size: 13px;
+      margin-bottom: 40px;
+    }
+
+
+    &__link {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    &__link:hover {
+      transform: scale(1.05);
+    }
+  }
+}

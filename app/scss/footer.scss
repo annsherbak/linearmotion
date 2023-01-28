@@ -1,0 +1,321 @@
+.footer {
+  margin-top: 50px;
+  background: $dark-blue;
+  
+  &__feedback {
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: $main-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+  
+  &::after {
+    content: url(/wp-content/themes/linearmotion/app/images/sprite.svg#Calling);
+    width: 38px;
+    height: 38px;
+  }
+  &:hover {
+    opacity: 1;
+    transition: all 0.2s ease;
+    
+  }
+  &:hover::after {
+    width: 70px;
+    height: 70px;
+    content: 'Заказать звонок';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 130%;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    
+    
+}
+  }
+
+  &__container {
+    position: relative;
+    max-width: 1470px;
+    margin: 0 auto;
+    
+    padding: 0 15px;
+  }
+
+  &__inner {
+    background: url(../images/footer__bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 68px 78px 28px;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__promo {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    color: #FFEED5;
+    max-width: 280px;
+  }
+
+
+  &__nav-list--item {
+    font-size: 18px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: $white !important;
+    margin-bottom: 8px;
+  }
+
+  &__nav-list--item:last-child {
+    margin-bottom: 0;
+  }
+
+
+  &__nav-list .sub-menu {
+    padding: 16px 0 !important;
+  }
+
+  &__nav-sublist--item {
+    font-size: 15px;
+    line-height: 130%;
+    text-transform: none;
+    margin-bottom: 8px;
+  }
+
+  &__nav-sublist--item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__nav-list a {
+    color: $white;
+  }
+
+  &__nav-list a:hover {
+    text-decoration: underline;
+  }
+
+
+  &__contacts {
+    color: $light-orange;
+  }
+
+  &__contact {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 130%;
+
+  }
+
+  &__contact:last-child {
+    margin-bottom: 0;
+  }
+
+  &__contact-item {
+    margin-bottom: 8px;
+  }
+
+  &__contact-item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__contact-sity {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__contact a {
+    display: block;
+    color: inherit;
+  }
+
+  &__contact-adress {
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  &__item-policy {
+    width: 100%;
+  }
+
+  &__phone {
+    color: $white;
+  }
+
+  &__phone-text {
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 8px;
+  }
+
+  &__phone-link {
+    font-weight: 600;
+    display: block;
+    color: inherit;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 8px;
+  }
+
+  &__phone-link:hover,
+  &__phone-link:focus {
+    text-decoration: underline;
+  }
+
+  &__phone-link:active {
+    opacity: 0.7;
+  }
+
+  &__phone-comment {
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFEED5;
+
+  }
+
+  &__copyright {
+    width: 100%;
+    margin-top: 32px;
+    font-size: 13px;
+    line-height: 130%;
+    color: $white;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .footer {
+    padding: 0;
+    &__feedback {
+      right: 20px;
+      top: -80px;
+    }
+
+    &__container {
+      padding: 0;
+    }
+
+    &__inner {
+      padding: 40px 20px;
+      padding-right: 50px;
+    }
+
+    &__logo {
+      margin-bottom: 56px;
+    }
+
+    &__promo {
+      display: none;
+    }
+
+    &__nav-list li {
+      font-size: 15px;
+      line-height: 130%;
+    }
+
+    &__nav-sublist--item {
+      font-size: 14px;
+      line-height: 130%;
+    }
+
+
+    &__contact {
+      font-size: 15px;
+    }
+
+
+    &__contact-adress {
+      display: none;
+    }
+
+    &__phone-text {
+      font-size: 15px;
+    }
+
+    &__phone-link {
+      font-size: 14px;
+    }
+
+    &__contact-sity {
+      margin-bottom: 12px;
+    }
+
+    &__phone-comment {
+      font-size: 12px;
+    }
+
+    &__copyright-text {
+      font-size: 12px;
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .footer {
+    &__inner {
+      padding: 20px;
+      padding-top: 48px;
+      flex-direction: column;
+      background-position-x: -40px;
+    }
+
+    &__contacts {
+      display: none !important;
+    }
+
+    &__nav-sublist {
+      display: none !important;
+    }
+
+    &__logo {
+      margin-bottom: 20px;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+
+    &__phone-comment {
+      font-size: 11px;
+    }
+
+    &__phone-link {
+      font-size: 15px;
+    }
+
+    &__nav-list li {
+      font-size: 13px;
+      line-height: 130%;
+      margin-bottom: 12px;
+    }
+    &__nav-list .sub-menu {
+      display: none;
+    }
+
+    &__copyright {
+      font-size: 12px;
+      line-height: 130%;
+      text-align: center;
+    }
+  }
+}
